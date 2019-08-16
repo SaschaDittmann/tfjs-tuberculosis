@@ -9,4 +9,5 @@ yarn-error.log
 .DS_STORE
 yalc.lock
 .vscode
-package-lock.json
+data
+model
