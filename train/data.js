@@ -11,6 +11,10 @@ function loadImages(dataDir) {
   
   var files = fs.readdirSync(dataDir);
   for (let i = 0; i < files.length; i++) { 
+    if (!files[i].toLocaleLowerCase().endsWith(".png")) {
+      continue;
+    }
+
     var filePath = path.join(dataDir, files[i]);
     
     var buffer = fs.readFileSync(filePath);
