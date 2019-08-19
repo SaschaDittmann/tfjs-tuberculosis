@@ -15,14 +15,13 @@ function loadImages(dataDir) {
     
     var buffer = fs.readFileSync(filePath);
     var imageTensor = tf.node.decodeImage(buffer)
-      .resizeNearestNeighbor([96,96]) // change the image size here
+      .resizeNearestNeighbor([96,96])
       .toFloat()
       .div(tf.scalar(255.0))
       .expandDims();
     images.push(imageTensor);
 
     var hasTuberculosis = files[i].toLocaleLowerCase().endsWith("_1.png");
-    //var labelTensor = tf.tensor1d(hasTuberculosis ? tf.scalar(1) : tf.scalar(0), "int32");
     labels.push(hasTuberculosis ? 1 : 0);
   }
 
