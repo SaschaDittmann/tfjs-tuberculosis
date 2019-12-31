@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/SaschaDittmann/tfjs-tuberculosis#readme",
   "dependencies": {
-    "@tensorflow/tfjs-node-gpu": "^1.2.7"
+    "@tensorflow/tfjs-node-gpu": "1.2.7"
   },
   "devDependencies": {
     "clang-format": "~1.2.2"
